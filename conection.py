@@ -10,14 +10,17 @@ def conectar():
         
 def create_table(conexion):
     cursor = conexion.cursor()
-    query = ''' CREATE TABLE IF NOT EXIST contacts (
+    q1 = ''' 
+    CREATE TABLE IF NOT EXISTS contacts (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
         enterprise TEXT NOT NULL,
         adress TEXT NOT NULL,
         phone TEXT NOT NULL,
         email TEXT NOT NULL
-        ) '''
+        );
+    '''
         
-    cursor.execute(query)
+    cursor.execute(q1)
     conexion.commit()
+    conexion.close()
