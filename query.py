@@ -27,7 +27,7 @@ def mostrar():
     # conectando con la bd y creando el cursor
     con = sqlite3.connect('contacts.db')
     cursor = con.cursor()
-    df = []
+    df = [] # dataframe
 
     # creación y ejecución del query
     q3 = f'''SELECT * FROM contacts;'''
