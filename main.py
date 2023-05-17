@@ -7,10 +7,11 @@ from interface import *
 peticion = conectar()
 create_table(peticion)
 
+
 def main():
-    os.system('cls')
-    
+    os.system("cls")
+
     mainWindow()
-    
-    
+
+
 main()
